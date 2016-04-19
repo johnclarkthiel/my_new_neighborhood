@@ -1,7 +1,7 @@
-<head>SELECT A CITY (NAME OR ZIP)</head>
-<form ng-controller='CityController as cityCtrl'>
-	<input type='text' ng-model='city'>
-	<button ng-click='cityCtrl.doStuff()'>stuff</button>
-</form>
+<div ng-controller='CityController as cityCtrl'><h4>SELECT A CITY (NAME OR ZIP)</h4>
+	<form>
+		<input type='text' ng-model='cityCtrl.city'><br/>
+		<button ng-click='cityCtrl.sendCity()'>Search city</button>
+	</form>
 
-<div>{{city}}</div>
+</div>
