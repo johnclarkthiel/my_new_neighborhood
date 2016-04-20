@@ -393,33 +393,136 @@ class CitiesController < ApplicationController
 		# 	City.create(:city_name => sf_name, :zip => sf_zip, :jobs => sf_jobs_num, :population => sf_pop, :top_employer => sf_top_employer)
 		# end	
 
-		cin = HTTParty.get("https://en.wikipedia.org/wiki/Cincinnati")
-		cin_page = Nokogiri::HTML(cin.body)
+		# cin = HTTParty.get("https://en.wikipedia.org/wiki/Cincinnati")
+		# cin_page = Nokogiri::HTML(cin.body)
 
-		cin_name = cin_page.css("span.fn.org").text
-		p cin_name
-		cin_pop = cin_page.css("tr.mergedrow > td")[12].text
-		p cin_pop
-		cin_zip = cin_page.css("span.postal-code").text
-		p cin_zip
-		cin_top_employer = "N/A"
-		# p cin_top_employer 
-		cin_jobs_num = jobs_page.css("td.jpc")[18].text
+		# cin_name = cin_page.css("span.fn.org").text
+		# p cin_name
+		# cin_pop = cin_page.css("tr.mergedrow > td")[12].text
+		# p cin_pop
+		# cin_zip = cin_page.css("span.postal-code").text
+		# p cin_zip
+		# cin_top_employer = "N/A"
+		# # p cin_top_employer 
+		# cin_jobs_num = jobs_page.css("td.jpc")[18].text
 		
-		cin_entry = City.find_by(:city_name => cin_name)
+		# cin_entry = City.find_by(:city_name => cin_name)
 
-		if cin_entry
-			City.update(cin_entry.id, {:city_name => cin_name, :zip => cin_zip, :jobs => cin_jobs_num, :population => cin_pop, :top_employer => cin_top_employer})
+		# if cin_entry
+		# 	City.update(cin_entry.id, {:city_name => cin_name, :zip => cin_zip, :jobs => cin_jobs_num, :population => cin_pop, :top_employer => cin_top_employer})
+		# else
+		# 	City.create(:city_name => cin_name, :zip => cin_zip, :jobs => cin_jobs_num, :population => cin_pop, :top_employer => cin_top_employer)
+		# end	
+
+		# cle = HTTParty.get("https://en.wikipedia.org/wiki/Cleveland")
+		# cle_page = Nokogiri::HTML(cle.body)
+
+		# cle_name = cle_page.css("span.fn.org").text
+		# p cle_name
+		# cle_pop = cle_page.css("tr.mergedrow > td")[14].text
+		# p cle_pop
+		# cle_zip = cle_page.css("span.postal-code").text
+		# p cle_zip
+		# cle_top_employer = "N/A"
+		# # p cle_top_employer 
+		# cle_jobs_num = jobs_page.css("td.jpc")[19].text
+		
+		# cle_entry = City.find_by(:city_name => cle_name)
+
+		# if cle_entry
+		# 	City.update(cle_entry.id, {:city_name => cle_name, :zip => cle_zip, :jobs => cle_jobs_num, :population => cle_pop, :top_employer => cle_top_employer})
+		# else
+		# 	City.create(:city_name => cle_name, :zip => cle_zip, :jobs => cle_jobs_num, :population => cle_pop, :top_employer => cle_top_employer)
+		# end	
+
+		# atl = HTTParty.get("https://en.wikipedia.org/wiki/Atlanta")
+		# atl_page = Nokogiri::HTML(atl.body)
+
+		# atl_name = atl_page.css("span.fn.org").text
+		# p atl_name
+		# atl_pop = atl_page.css("tr.mergedrow > td")[14].text
+		# p atl_pop
+		# atl_zip = atl_page.css("span.postal-code").text
+		# p atl_zip
+		# atl_top_employer = "N/A"
+		# # p cle_top_employer 
+		# atl_jobs_num = jobs_page.css("td.jpc")[20].text
+		
+		# atl_entry = City.find_by(:city_name => atl_name)
+
+		# if atl_entry
+		# 	City.update(atl_entry.id, {:city_name => atl_name, :zip => atl_zip, :jobs => atl_jobs_num, :population => atl_pop, :top_employer => atl_top_employer})
+		# else
+		# 	City.create(:city_name => atl_name, :zip => atl_zip, :jobs => atl_jobs_num, :population => atl_pop, :top_employer => atl_top_employer)
+		# end	
+
+		# dal = HTTParty.get("https://en.wikipedia.org/wiki/Dallas")
+		# dal_page = Nokogiri::HTML(dal.body)
+
+		# dal_name = dal_page.css("span.fn.org").text
+		# p dal_name
+		# dal_pop = dal_page.css("tr.mergedrow > td")[12].text
+		# p dal_pop
+		# dal_zip = dal_page.css("tr.mergedrow > td")[22].text
+		# p dal_zip
+		# dal_top_employer = "N/A"
+		# # p dal_top_employer 
+		# dal_jobs_num = jobs_page.css("td.jpc")[21].text
+		
+		# dal_entry = City.find_by(:city_name => dal_name)
+
+		# if dal_entry
+		# 	City.update(dal_entry.id, {:city_name => dal_name, :zip => dal_zip, :jobs => dal_jobs_num, :population => dal_pop, :top_employer => dal_top_employer})
+		# else
+		# 	City.create(:city_name => dal_name, :zip => dal_zip, :jobs => dal_jobs_num, :population => dal_pop, :top_employer => dal_top_employer)
+		# end	
+
+
+		# port = HTTParty.get("https://en.wikipedia.org/wiki/Portland,_Oregon")
+		# port_page = Nokogiri::HTML(port.body)
+
+		# port_name = port_page.css("span.fn.org")[0].text
+		# p port_name
+		# port_pop = port_page.css("tr.mergedrow > td")[14].text
+		# p port_pop
+		# port_zip = port_page.css("span.postal-code").text
+		# p port_zip
+		# port_top_employer = "N/A"
+		# # p port top_employer 
+		# port_jobs_num = jobs_page.css("td.jpc")[22].text
+		
+		# port_entry = City.find_by(:city_name => port_name)
+
+		# if port_entry
+		# 	City.update(port_entry.id, {:city_name => port_name, :zip => port_zip, :jobs => port_jobs_num, :population => port_pop, :top_employer => port_top_employer})
+		# else
+		# 	City.create(:city_name => port_name, :zip => port_zip, :jobs => port_jobs_num, :population => port_pop, :top_employer => port_top_employer)
+		# end	
+
+		orl = HTTParty.get("https://en.wikipedia.org/wiki/Orlando,_Florida")
+		orl_page = Nokogiri::HTML(orl.body)
+
+		orl_name = orl_page.css("span.fn.org")[0].text
+		p orl_name
+		orl_pop = orl_page.css("tr.mergedrow > td")[12].text
+		p orl_pop
+		orl_zip = orl_page.css("span.postal-code").text
+		p orl_zip
+		orl_top_employer = "N/A"
+		# p port top_employer 
+		orl_jobs_num = jobs_page.css("td.jpc")[23].text
+		
+		orl_entry = City.find_by(:city_name => orl_name)
+
+		if orl_entry
+			City.update(orl_entry.id, {:city_name => orl_name, :zip => orl_zip, :jobs => orl_jobs_num, :population => orl_pop, :top_employer => orl_top_employer})
 		else
-			City.create(:city_name => cin_name, :zip => cin_zip, :jobs => cin_jobs_num, :population => cin_pop, :top_employer => cin_top_employer)
+			City.create(:city_name => orl_name, :zip => orl_zip, :jobs => orl_jobs_num, :population => orl_pop, :top_employer => orl_top_employer)
 		end	
 
 	end
 
 end
 
-    	# t.string "city_name"
-    	# t.string "zip"
-    	# t.string "jobs"
-    	# t.string "population"
-    	# t.string "top_employer"
+    	
+    
