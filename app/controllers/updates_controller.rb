@@ -1,5 +1,5 @@
 class UpdatesController < ApplicationController
-	respond_to :json
+	# respond_to :json
 
 	def update_cities
 		san_jose = HTTParty.get("https://en.wikipedia.org/wiki/San_Jose,_California")
@@ -900,7 +900,7 @@ class UpdatesController < ApplicationController
 		la = HTTParty.get("https://en.wikipedia.org/wiki/Los_Angeles")
 		la_page = Nokogiri::HTML(la.body)
 
-		la_name = la_page.css("span.fn.org").text
+		la_name = la_page.css("span.fn.org")[0].text
 		p la_name
 		la_pop = la_page.css("tr.mergedrow > td")[15].text
 		p la_pop

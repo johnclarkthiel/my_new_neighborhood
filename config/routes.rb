@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resource :cities
 
   post "/cities/city_search" => "cities#city_search"
+  get "/cities/city_search" => "cities#city_search"
 end
 
 #             Prefix Verb   URI Pattern                   Controller#Action
@@ -19,3 +20,4 @@ end
 #                    PUT    /cities(.:format)             cities#update
 #                    DELETE /cities(.:format)             cities#destroy
 # cities_city_search POST   /cities/city_search(.:format) cities#city_search
+#                    GET    /cities/city_search(.:format) cities#city_search
