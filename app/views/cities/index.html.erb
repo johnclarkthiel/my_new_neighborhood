@@ -1,9 +1,5 @@
+
 <div ng-controller='CityController as cityCtrl'><h4>SELECT A CITY</h4>
-<!-- 	<form>
-		<input type='text' ng-model='cityCtrl.city'><br/>
-		<button ng-click='cityCtrl.sendCity()'>Search city</button>
-	</form>
- -->
 	<form>
 		<select name='city_name' ng-model='cityCtrl.selection'>
 			<% @cities.each do |city| %>
@@ -13,11 +9,27 @@
 		<br/><br/>
 		<button ng-click='cityCtrl.sendCity()'>Search City</button>
 	</form>
+	<br><br><br>
+	<div class='container-fluid'>
 
-	<h4 ng-if='cityCtrl.city_name'>City Data:</h4>
-		<p ng-if='cityCtrl.city_name'>City: {{cityCtrl.city_name}}</p>
-		<p ng-if='cityCtrl.city_name'>Population: {{cityCtrl.population}}</p>
-		<p ng-if='cityCtrl.city_name'>Jobs per 1000 people: {{cityCtrl.jobs}}</p>
-		<p ng-if='cityCtrl.city_name'>Top Employer: {{cityCtrl.top_employer}}</p>
-		<p ng-if='cityCtrl.city_name'>Zip(s): {{cityCtrl.zip}}</p>
+			<table class='table table-bordered' ng-if='cityCtrl.city_name'>
+				<thead>
+					<th class='center'>City</th>
+					<th class='center'>Population</th>
+					<th class='center'>Jobs Per 1000 people</th>
+					<th class='center'>Top Employer</th>
+				</thead>
+				<tbody>
+					<tr> 
+						<td>{{cityCtrl.city_name}}</td>
+						<td>{{cityCtrl.population}}</td>
+						<td>{{cityCtrl.jobs}}</td>
+						<td>{{cityCtrl.top_employer}}</td>
+					</tr>
+				</tbody>
+			</table>
+
+	</div>
+
 </div>
+

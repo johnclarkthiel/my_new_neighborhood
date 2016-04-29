@@ -1,0 +1,40 @@
+* {
+	margin: 0 auto;
+	padding: 0;
+}
+
+body {
+	height: 100%;
+	width: 100%;
+}
+
+header {
+	height: 10%;
+	width: 100%;
+	background: lightblue;
+}
+
+nav, ul {
+	height: 100%;
+	width: 100%;
+}
+
+
+.nav {
+	display: inline-block;
+	/*float: left;*/
+	margin-right: 2%;
+}
+
+a {
+	text-decoration: none;
+}
+
+.right {
+	text-align: right;
+	background-position: right;
+}
+
+td, tr, th, tbody, table, thead, body, table, div, .center {
+	text-align: center;
+}

@@ -1,5 +1,6 @@
 class UpdatesController < ApplicationController
-	# respond_to :json
+	skip_before_filter :verify_authenticity_token
+	respond_to :json
 
 	def update_cities
 		san_jose = HTTParty.get("https://en.wikipedia.org/wiki/San_Jose,_California")
@@ -1067,9 +1068,11 @@ class UpdatesController < ApplicationController
 
 		@cities = City.all
 
-		respond_to do |format|
-			format.json {render :json => @cities.to_json}
-		end
+		# respond_to do |format|
+		# 	format.json {render :json => @cities.to_json}
+		# end
+
+		render json: @cities
 
 		p "SUCCESS"
 

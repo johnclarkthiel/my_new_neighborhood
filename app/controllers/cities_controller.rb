@@ -2,12 +2,18 @@ class CitiesController < ApplicationController
 	skip_before_filter :verify_authenticity_token
 	helper_method :city_search
 	respond_to :json, :html, :js
+	before_action :authenticate_user!, only: :secure
 
 
 	def index
 		p "INDEX WORKING"
 
-		@cities = City.all
+		city = City.all
+		sort_city = city.sort_by do |c|
+			c[:city_name]
+		end
+
+		@cities = sort_city
 
 	end
 
