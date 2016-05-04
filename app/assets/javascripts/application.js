@@ -14,4 +14,6 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require angular
+//= require Chart
+//= require excanvas
 //= require_tree .

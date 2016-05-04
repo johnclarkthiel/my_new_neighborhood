@@ -25,7 +25,7 @@ class UpdatesController < ApplicationController
 		san_jose_entry = City.find_by(:city_name => san_jose_name)
 
 		if san_jose_entry
-			City.update(san_jose_entry.id, {:city_name => san_jose_name, :zip => san_jose_zip, :jobs => san_jose_jobs_num, :population => san_jose_pop, :top_employer => san_jose_top_employer})
+			City.update(san_jose_entry.id, {:state => "CA", :city_name => san_jose_name, :zip => san_jose_zip, :jobs => san_jose_jobs_num, :population => san_jose_pop, :top_employer => san_jose_top_employer})
 		else
 			City.create(:city_name => san_jose_name, :zip => san_jose_zip, :jobs => san_jose_jobs_num, :population => san_jose_pop, :top_employer => san_jose_top_employer)
 		end
@@ -45,7 +45,7 @@ class UpdatesController < ApplicationController
 		slc_entry = City.find_by(:city_name => slc_name)
 
 		if slc_entry
-			City.update(slc_entry.id, {:city_name => slc_name, :zip => slc_zip, :jobs => slc_jobs_num, :population => slc_pop, :top_employer => "N/A"})
+			City.update(slc_entry.id, {:state => "UT", :city_name => slc_name, :zip => slc_zip, :jobs => slc_jobs_num, :population => slc_pop, :top_employer => "N/A"})
 		else
 			City.create(:city_name => slc_name, :zip => slc_zip, :jobs => slc_jobs_num, :population => slc_pop, :top_employer => "N/A")
 		end
@@ -63,7 +63,7 @@ class UpdatesController < ApplicationController
 		ral_entry = City.find_by(:city_name => ral_name)
 
 		if ral_entry
-			City.update(ral_entry.id, {:city_name => ral_name, :zip => ral_zip, :jobs => ral_jobs_num, :population => ral_pop, :top_employer => ral_top_employer})
+			City.update(ral_entry.id, {:state => "NC", :city_name => ral_name, :zip => ral_zip, :jobs => ral_jobs_num, :population => ral_pop, :top_employer => ral_top_employer})
 		else
 			City.create(:city_name => ral_name, :zip => ral_zip, :jobs => ral_jobs_num, :population => ral_pop, :top_employer => ral_top_employer)
 		end
@@ -85,7 +85,7 @@ class UpdatesController < ApplicationController
 		den_entry = City.find_by(:city_name => den_name)
 
 		if den_entry
-			City.update(den_entry.id, {:city_name => den_name, :zip => den_zip, :jobs => den_jobs_num, :population => den_pop, :top_employer => den_top_employer})
+			City.update(den_entry.id, {:state => "CO", :city_name => den_name, :zip => den_zip, :jobs => den_jobs_num, :population => den_pop, :top_employer => den_top_employer})
 		else
 			City.create(:city_name => den_name, :zip => den_zip, :jobs => den_jobs_num, :population => den_pop, :top_employer => den_top_employer)
 		end
@@ -107,7 +107,7 @@ class UpdatesController < ApplicationController
 		seattle_entry = City.find_by(:city_name => seattle_name)
 
 		if seattle_entry
-			City.update(seattle_entry.id, {:city_name => seattle_name, :zip => seattle_zip, :jobs => seattle_jobs_num, :population => seattle_pop, :top_employer => seattle_top_employer})
+			City.update(seattle_entry.id, {:state => "WA", :city_name => seattle_name, :zip => seattle_zip, :jobs => seattle_jobs_num, :population => seattle_pop, :top_employer => seattle_top_employer})
 		else
 			City.create(:city_name => seattle_name, :zip => seattle_zip, :jobs => seattle_jobs_num, :population => seattle_pop, :top_employer => seattle_top_employer)
 		end
@@ -129,7 +129,7 @@ class UpdatesController < ApplicationController
 		austin_entry = City.find_by(:city_name => austin_name)
 
 		if austin_entry
-			City.update(austin_entry.id, {:city_name => austin_name, :zip => austin_zip, :jobs => austin_jobs_num, :population => austin_pop, :top_employer => austin_top_employer})
+			City.update(austin_entry.id, {:state => "TX", :city_name => austin_name, :zip => austin_zip, :jobs => austin_jobs_num, :population => austin_pop, :top_employer => austin_top_employer})
 		else
 			City.create(:city_name => austin_name, :zip => austin_zip, :jobs => austin_jobs_num, :population => austin_pop, :top_employer => austin_top_employer)
 		end		
@@ -151,7 +151,7 @@ class UpdatesController < ApplicationController
 		nashville_entry = City.find_by(:city_name => nashville_name)
 
 		if nashville_entry
-			City.update(nashville_entry.id, {:city_name => nashville_name, :zip => nashville_zip, :jobs => nashville_jobs_num, :population => nashville_pop, :top_employer => nashville_top_employer})
+			City.update(nashville_entry.id, {:state => "TN", :city_name => nashville_name, :zip => nashville_zip, :jobs => nashville_jobs_num, :population => nashville_pop, :top_employer => nashville_top_employer})
 		else
 			City.create(:city_name => nashville_name, :zip => nashville_zip, :jobs => nashville_jobs_num, :population => nashville_pop, :top_employer => nashville_top_employer)
 		end		
@@ -173,7 +173,7 @@ class UpdatesController < ApplicationController
 		richmond_entry = City.find_by(:city_name => richmond_name)
 
 		if richmond_entry
-			City.update(richmond_entry.id, {:city_name => richmond_name, :zip => richmond_zip, :jobs => richmond_jobs_num, :population => richmond_pop, :top_employer => richmond_top_employer})
+			City.update(richmond_entry.id, {:state => "VA", :city_name => richmond_name, :zip => richmond_zip, :jobs => richmond_jobs_num, :population => richmond_pop, :top_employer => richmond_top_employer})
 		else
 			City.create(:city_name => richmond_name, :zip => richmond_zip, :jobs => richmond_jobs_num, :population => richmond_pop, :top_employer => richmond_top_employer)
 		end		
@@ -195,7 +195,7 @@ class UpdatesController < ApplicationController
 		indy_entry = City.find_by(:city_name => indy_name)
 
 		if indy_entry
-			City.update(indy_entry.id, {:city_name => indy_name, :zip => indy_zip, :jobs => indy_jobs_num, :population => indy_pop, :top_employer => indy_top_employer})
+			City.update(indy_entry.id, {:state => "IN", :city_name => indy_name, :zip => indy_zip, :jobs => indy_jobs_num, :population => indy_pop, :top_employer => indy_top_employer})
 		else
 			City.create(:city_name => indy_name, :zip => indy_zip, :jobs => indy_jobs_num, :population => indy_pop, :top_employer => indy_top_employer)
 		end		
@@ -217,7 +217,7 @@ class UpdatesController < ApplicationController
 		minn_entry = City.find_by(:city_name => minn_name)
 
 		if minn_entry
-			City.update(minn_entry.id, {:city_name => minn_name, :zip => minn_zip, :jobs => minn_jobs_num, :population => minn_pop, :top_employer => minn_top_employer})
+			City.update(minn_entry.id, {:state => "MN", :city_name => minn_name, :zip => minn_zip, :jobs => minn_jobs_num, :population => minn_pop, :top_employer => minn_top_employer})
 		else
 			City.create(:city_name => minn_name, :zip => minn_zip, :jobs => minn_jobs_num, :population => minn_pop, :top_employer => minn_top_employer)
 		end		
@@ -239,7 +239,7 @@ class UpdatesController < ApplicationController
 		kc_entry = City.find_by(:city_name => kc_name)
 
 		if kc_entry
-			City.update(kc_entry.id, {:city_name => kc_name, :zip => kc_zip, :jobs => kc_jobs_num, :population => kc_pop, :top_employer => kc_top_employer})
+			City.update(kc_entry.id, {:state => "MO", :city_name => kc_name, :zip => kc_zip, :jobs => kc_jobs_num, :population => kc_pop, :top_employer => kc_top_employer})
 		else
 			City.create(:city_name => kc_name, :zip => kc_zip, :jobs => kc_jobs_num, :population => kc_pop, :top_employer => kc_top_employer)
 		end		
@@ -261,7 +261,7 @@ class UpdatesController < ApplicationController
 		lou_entry = City.find_by(:city_name => lou_name)
 
 		if lou_entry
-			City.update(lou_entry.id,{:city_name => lou_name, :zip => lou_zip, :jobs => lou_jobs_num, :population => lou_pop, :top_employer => lou_top_employer})
+			City.update(lou_entry.id,{:state => "KY", :city_name => lou_name, :zip => lou_zip, :jobs => lou_jobs_num, :population => lou_pop, :top_employer => lou_top_employer})
 		else
 			City.create(:city_name => lou_name, :zip => lou_zip, :jobs => lou_jobs_num, :population => lou_pop, :top_employer => lou_top_employer)
 		end		
@@ -283,7 +283,7 @@ class UpdatesController < ApplicationController
 		boston_entry = City.find_by(:city_name => boston_name)
 
 		if boston_entry
-			City.update(boston_entry.id, {:city_name => boston_name, :zip => boston_zip, :jobs => boston_jobs_num, :population => boston_pop, :top_employer => boston_top_employer})
+			City.update(boston_entry.id, {:state => "MA", :city_name => boston_name, :zip => boston_zip, :jobs => boston_jobs_num, :population => boston_pop, :top_employer => boston_top_employer})
 		else
 			City.create(:city_name => boston_name, :zip => boston_zip, :jobs => boston_jobs_num, :population => boston_pop, :top_employer => boston_top_employer)
 		end		
@@ -304,7 +304,7 @@ class UpdatesController < ApplicationController
 		hart_entry = City.find_by(:city_name => hart_name)
 
 		if hart_entry
-			City.update(hart_entry.id, {:city_name => hart_name, :zip => hart_zip, :jobs => hart_jobs_num, :population => hart_pop, :top_employer => hart_top_employer})
+			City.update(hart_entry.id, {:state => "CT", :city_name => hart_name, :zip => hart_zip, :jobs => hart_jobs_num, :population => hart_pop, :top_employer => hart_top_employer})
 		else
 			City.create(:city_name => hart_name, :zip => hart_zip, :jobs => hart_jobs_num, :population => hart_pop, :top_employer => hart_top_employer)
 		end		
@@ -325,7 +325,7 @@ class UpdatesController < ApplicationController
 		col_entry = City.find_by(:city_name => col_name)
 
 		if col_entry
-			City.update(col_entry.id, {:city_name => col_name, :zip => col_zip, :jobs => col_jobs_num, :population => col_pop, :top_employer => col_top_employer})
+			City.update(col_entry.id, {:state => "OH", :city_name => col_name, :zip => col_zip, :jobs => col_jobs_num, :population => col_pop, :top_employer => col_top_employer})
 		else
 			City.create(:city_name => col_name, :zip => col_zip, :jobs => col_jobs_num, :population => col_pop, :top_employer => col_top_employer)
 		end	
@@ -367,7 +367,7 @@ class UpdatesController < ApplicationController
 		pitt_entry = City.find_by(:city_name => pitt_name)
 
 		if pitt_entry
-			City.update(pitt_entry.id, {:city_name => pitt_name, :zip => pitt_zip, :jobs => pitt_jobs_num, :population => pitt_pop, :top_employer => pitt_top_employer})
+			City.update(pitt_entry.id, {:state => "PA", :city_name => pitt_name, :zip => pitt_zip, :jobs => pitt_jobs_num, :population => pitt_pop, :top_employer => pitt_top_employer})
 		else
 			City.create(:city_name => pitt_name, :zip => pitt_zip, :jobs => pitt_jobs_num, :population => pitt_pop, :top_employer => pitt_top_employer)
 		end	
@@ -388,7 +388,7 @@ class UpdatesController < ApplicationController
 		sf_entry = City.find_by(:city_name => sf_name)
 
 		if sf_entry
-			City.update(sf_entry.id, {:city_name => sf_name, :zip => sf_zip, :jobs => sf_jobs_num, :population => sf_pop, :top_employer => sf_top_employer})
+			City.update(sf_entry.id, {:state => "CA", :city_name => sf_name, :zip => sf_zip, :jobs => sf_jobs_num, :population => sf_pop, :top_employer => sf_top_employer})
 		else
 			City.create(:city_name => sf_name, :zip => sf_zip, :jobs => sf_jobs_num, :population => sf_pop, :top_employer => sf_top_employer)
 		end	
@@ -409,7 +409,7 @@ class UpdatesController < ApplicationController
 		cin_entry = City.find_by(:city_name => cin_name)
 
 		if cin_entry
-			City.update(cin_entry.id, {:city_name => cin_name, :zip => cin_zip, :jobs => cin_jobs_num, :population => cin_pop, :top_employer => cin_top_employer})
+			City.update(cin_entry.id, {:state => "OH", :city_name => cin_name, :zip => cin_zip, :jobs => cin_jobs_num, :population => cin_pop, :top_employer => cin_top_employer})
 		else
 			City.create(:city_name => cin_name, :zip => cin_zip, :jobs => cin_jobs_num, :population => cin_pop, :top_employer => cin_top_employer)
 		end	
@@ -430,7 +430,7 @@ class UpdatesController < ApplicationController
 		cle_entry = City.find_by(:city_name => cle_name)
 
 		if cle_entry
-			City.update(cle_entry.id, {:city_name => cle_name, :zip => cle_zip, :jobs => cle_jobs_num, :population => cle_pop, :top_employer => cle_top_employer})
+			City.update(cle_entry.id, {:state => "OH", :city_name => cle_name, :zip => cle_zip, :jobs => cle_jobs_num, :population => cle_pop, :top_employer => cle_top_employer})
 		else
 			City.create(:city_name => cle_name, :zip => cle_zip, :jobs => cle_jobs_num, :population => cle_pop, :top_employer => cle_top_employer)
 		end	
@@ -451,7 +451,7 @@ class UpdatesController < ApplicationController
 		atl_entry = City.find_by(:city_name => atl_name)
 
 		if atl_entry
-			City.update(atl_entry.id, {:city_name => atl_name, :zip => atl_zip, :jobs => atl_jobs_num, :population => atl_pop, :top_employer => atl_top_employer})
+			City.update(atl_entry.id, {:state => "GA", :city_name => atl_name, :zip => atl_zip, :jobs => atl_jobs_num, :population => atl_pop, :top_employer => atl_top_employer})
 		else
 			City.create(:city_name => atl_name, :zip => atl_zip, :jobs => atl_jobs_num, :population => atl_pop, :top_employer => atl_top_employer)
 		end	
@@ -472,7 +472,7 @@ class UpdatesController < ApplicationController
 		dal_entry = City.find_by(:city_name => dal_name)
 
 		if dal_entry
-			City.update(dal_entry.id, {:city_name => dal_name, :zip => dal_zip, :jobs => dal_jobs_num, :population => dal_pop, :top_employer => dal_top_employer})
+			City.update(dal_entry.id, {:state => "TX", :city_name => dal_name, :zip => dal_zip, :jobs => dal_jobs_num, :population => dal_pop, :top_employer => dal_top_employer})
 		else
 			City.create(:city_name => dal_name, :zip => dal_zip, :jobs => dal_jobs_num, :population => dal_pop, :top_employer => dal_top_employer)
 		end	
@@ -494,7 +494,7 @@ class UpdatesController < ApplicationController
 		port_entry = City.find_by(:city_name => port_name)
 
 		if port_entry
-			City.update(port_entry.id, {:city_name => port_name, :zip => port_zip, :jobs => port_jobs_num, :population => port_pop, :top_employer => port_top_employer})
+			City.update(port_entry.id, {:state => "OR", :city_name => port_name, :zip => port_zip, :jobs => port_jobs_num, :population => port_pop, :top_employer => port_top_employer})
 		else
 			City.create(:city_name => port_name, :zip => port_zip, :jobs => port_jobs_num, :population => port_pop, :top_employer => port_top_employer)
 		end	
@@ -515,7 +515,7 @@ class UpdatesController < ApplicationController
 		orl_entry = City.find_by(:city_name => orl_name)
 
 		if orl_entry
-			City.update(orl_entry.id, {:city_name => orl_name, :zip => orl_zip, :jobs => orl_jobs_num, :population => orl_pop, :top_employer => orl_top_employer})
+			City.update(orl_entry.id, {:state => "FL", :city_name => orl_name, :zip => orl_zip, :jobs => orl_jobs_num, :population => orl_pop, :top_employer => orl_top_employer})
 		else
 			City.create(:city_name => orl_name, :zip => orl_zip, :jobs => orl_jobs_num, :population => orl_pop, :top_employer => orl_top_employer)
 		end	
@@ -536,7 +536,7 @@ class UpdatesController < ApplicationController
 		stl_entry = City.find_by(:city_name => stl_name)
 
 		if stl_entry
-			City.update(stl_entry.id, {:city_name => stl_name, :zip => stl_zip, :jobs => stl_jobs_num, :population => stl_pop, :top_employer => stl_top_employer})
+			City.update(stl_entry.id, {:state => "MO", :city_name => stl_name, :zip => stl_zip, :jobs => stl_jobs_num, :population => stl_pop, :top_employer => stl_top_employer})
 		else
 			City.create(:city_name => stl_name, :zip => stl_zip, :jobs => stl_jobs_num, :population => stl_pop, :top_employer => stl_top_employer)
 		end	
@@ -557,7 +557,7 @@ class UpdatesController < ApplicationController
 		phi_entry = City.find_by(:city_name => phi_name)
 
 		if phi_entry
-			City.update(phi_entry.id, {:city_name => phi_name, :zip => phi_zip, :jobs => phi_jobs_num, :population => phi_pop, :top_employer => phi_top_employer})
+			City.update(phi_entry.id, {:state => "PA", :city_name => phi_name, :zip => phi_zip, :jobs => phi_jobs_num, :population => phi_pop, :top_employer => phi_top_employer})
 		else
 			City.create(:city_name => phi_name, :zip => phi_zip, :jobs => phi_jobs_num, :population => phi_pop, :top_employer => phi_top_employer)
 		end	
@@ -578,7 +578,7 @@ class UpdatesController < ApplicationController
 		cha_entry = City.find_by(:city_name => cha_name)
 
 		if cha_entry
-			City.update(cha_entry.id, {:city_name => cha_name, :zip => cha_zip, :jobs => cha_jobs_num, :population => cha_pop, :top_employer => cha_top_employer})
+			City.update(cha_entry.id, {:state => "NC", :city_name => cha_name, :zip => cha_zip, :jobs => cha_jobs_num, :population => cha_pop, :top_employer => cha_top_employer})
 		else
 			City.create(:city_name => cha_name, :zip => cha_zip, :jobs => cha_jobs_num, :population => cha_pop, :top_employer => cha_top_employer)
 		end	
@@ -599,7 +599,7 @@ class UpdatesController < ApplicationController
 		chi_entry = City.find_by(:city_name => chi_name)
 
 		if chi_entry
-			City.update(chi_entry.id, {:city_name => chi_name, :zip => chi_zip, :jobs => chi_jobs_num, :population => chi_pop, :top_employer => chi_top_employer})
+			City.update(chi_entry.id, {:state => "IL", :city_name => chi_name, :zip => chi_zip, :jobs => chi_jobs_num, :population => chi_pop, :top_employer => chi_top_employer})
 		else
 			City.create(:city_name => chi_name, :zip => chi_zip, :jobs => chi_jobs_num, :population => chi_pop, :top_employer => chi_top_employer)
 		end	
@@ -620,7 +620,7 @@ class UpdatesController < ApplicationController
 		bal_entry = City.find_by(:city_name => bal_name)
 
 		if bal_entry
-			City.update(bal_entry.id, {:city_name => bal_name, :zip => bal_zip, :jobs => bal_jobs_num, :population => bal_pop, :top_employer => bal_top_employer})
+			City.update(bal_entry.id, {:state => "MD", :city_name => bal_name, :zip => bal_zip, :jobs => bal_jobs_num, :population => bal_pop, :top_employer => bal_top_employer})
 		else
 			City.create(:city_name => bal_name, :zip => bal_zip, :jobs => bal_jobs_num, :population => bal_pop, :top_employer => bal_top_employer)
 		end	
@@ -641,7 +641,7 @@ class UpdatesController < ApplicationController
 		mil_entry = City.find_by(:city_name => mil_name)
 
 		if mil_entry
-			City.update(mil_entry.id, {:city_name => mil_name, :zip => mil_zip, :jobs => mil_jobs_num, :population => mil_pop, :top_employer => mil_top_employer})
+			City.update(mil_entry.id, {:state => "WI", :city_name => mil_name, :zip => mil_zip, :jobs => mil_jobs_num, :population => mil_pop, :top_employer => mil_top_employer})
 		else
 			City.create(:city_name => mil_name, :zip => mil_zip, :jobs => mil_jobs_num, :population => mil_pop, :top_employer => mil_top_employer)
 		end	
@@ -662,7 +662,7 @@ class UpdatesController < ApplicationController
 		pho_entry = City.find_by(:city_name => pho_name)
 
 		if pho_entry
-			City.update(pho_entry.id, {:city_name => pho_name, :zip => pho_zip, :jobs => pho_jobs_num, :population => pho_pop, :top_employer => pho_top_employer})
+			City.update(pho_entry.id, {:state => "AZ", :city_name => pho_name, :zip => pho_zip, :jobs => pho_jobs_num, :population => pho_pop, :top_employer => pho_top_employer})
 		else
 			City.create(:city_name => pho_name, :zip => pho_zip, :jobs => pho_jobs_num, :population => pho_pop, :top_employer => pho_top_employer)
 		end	
@@ -683,7 +683,7 @@ class UpdatesController < ApplicationController
 		okc_entry = City.find_by(:city_name => okc_name)
 
 		if okc_entry
-			City.update(okc_entry.id, {:city_name => okc_name, :zip => okc_zip, :jobs => okc_jobs_num, :population => okc_pop, :top_employer => okc_top_employer})
+			City.update(okc_entry.id, {:state => "OK", :city_name => okc_name, :zip => okc_zip, :jobs => okc_jobs_num, :population => okc_pop, :top_employer => okc_top_employer})
 		else
 			City.create(:city_name => okc_name, :zip => okc_zip, :jobs => okc_jobs_num, :population => okc_pop, :top_employer => okc_top_employer)
 		end	
@@ -704,7 +704,7 @@ class UpdatesController < ApplicationController
 		det_entry = City.find_by(:city_name => det_name)
 
 		if det_entry
-			City.update(det_entry.id, {:city_name => det_name, :zip => det_zip, :jobs => det_jobs_num, :population => det_pop, :top_employer => det_top_employer})
+			City.update(det_entry.id, {:state => "MI", :city_name => det_name, :zip => det_zip, :jobs => det_jobs_num, :population => det_pop, :top_employer => det_top_employer})
 		else
 			City.create(:city_name => det_name, :zip => det_zip, :jobs => det_jobs_num, :population => det_pop, :top_employer => det_top_employer)
 		end	
@@ -725,7 +725,7 @@ class UpdatesController < ApplicationController
 		san_entry = City.find_by(:city_name => san_name)
 
 		if san_entry
-			City.update(san_entry.id, {:city_name => san_name, :zip => san_zip, :jobs => san_jobs_num, :population => san_pop, :top_employer => san_top_employer})
+			City.update(san_entry.id, {:state => "TX", :city_name => san_name, :zip => san_zip, :jobs => san_jobs_num, :population => san_pop, :top_employer => san_top_employer})
 		else
 			City.create(:city_name => san_name, :zip => san_zip, :jobs => san_jobs_num, :population => san_pop, :top_employer => san_top_employer)
 		end	
@@ -746,7 +746,7 @@ class UpdatesController < ApplicationController
 		sac_entry = City.find_by(:city_name => sac_name)
 
 		if sac_entry
-			City.update(sac_entry.id, {:city_name => sac_name, :zip => sac_zip, :jobs => sac_jobs_num, :population => sac_pop, :top_employer => sac_top_employer})
+			City.update(sac_entry.id, {:state => "CA", :city_name => sac_name, :zip => sac_zip, :jobs => sac_jobs_num, :population => sac_pop, :top_employer => sac_top_employer})
 		else
 			City.create(:city_name => sac_name, :zip => sac_zip, :jobs => sac_jobs_num, :population => sac_pop, :top_employer => sac_top_employer)
 		end	
@@ -767,7 +767,7 @@ class UpdatesController < ApplicationController
 		jax_entry = City.find_by(:city_name => jax_name)
 
 		if jax_entry
-			City.update(jax_entry.id, {:city_name => jax_name, :zip => jax_zip, :jobs => jax_jobs_num, :population => jax_pop, :top_employer => jax_top_employer})
+			City.update(jax_entry.id, {:state => "FL", :city_name => jax_name, :zip => jax_zip, :jobs => jax_jobs_num, :population => jax_pop, :top_employer => jax_top_employer})
 		else
 			City.create(:city_name => jax_name, :zip => jax_zip, :jobs => jax_jobs_num, :population => jax_pop, :top_employer => jax_top_employer)
 		end	
@@ -788,7 +788,7 @@ class UpdatesController < ApplicationController
 		bir_entry = City.find_by(:city_name => bir_name)
 
 		if bir_entry
-			City.update(bir_entry.id, {:city_name => bir_name, :zip => bir_zip, :jobs => bir_jobs_num, :population => bir_pop, :top_employer => bir_top_employer})
+			City.update(bir_entry.id, {:state => "AL", :city_name => bir_name, :zip => bir_zip, :jobs => bir_jobs_num, :population => bir_pop, :top_employer => bir_top_employer})
 		else
 			City.create(:city_name => bir_name, :zip => bir_zip, :jobs => bir_jobs_num, :population => bir_pop, :top_employer => bir_top_employer)
 		end	
@@ -809,7 +809,7 @@ class UpdatesController < ApplicationController
 		sd_entry = City.find_by(:city_name => sd_name)
 
 		if sd_entry
-			City.update(sd_entry.id, {:city_name => sd_name, :zip => sd_zip, :jobs => sd_jobs_num, :population => sd_pop, :top_employer => sd_top_employer})
+			City.update(sd_entry.id, {:state => "CA", :city_name => sd_name, :zip => sd_zip, :jobs => sd_jobs_num, :population => sd_pop, :top_employer => sd_top_employer})
 		else
 			City.create(:city_name => sd_name, :zip => sd_zip, :jobs => sd_jobs_num, :population => sd_pop, :top_employer => sd_top_employer)
 		end	
@@ -830,7 +830,7 @@ class UpdatesController < ApplicationController
 		tpa_entry = City.find_by(:city_name => tpa_name)
 
 		if tpa_entry
-			City.update(tpa_entry.id, {:city_name => tpa_name, :zip => tpa_zip, :jobs => tpa_jobs_num, :population => tpa_pop, :top_employer => tpa_top_employer})
+			City.update(tpa_entry.id, {:state => "FL", :city_name => tpa_name, :zip => tpa_zip, :jobs => tpa_jobs_num, :population => tpa_pop, :top_employer => tpa_top_employer})
 		else
 			City.create(:city_name => tpa_name, :zip => tpa_zip, :jobs => tpa_jobs_num, :population => tpa_pop, :top_employer => tpa_top_employer)
 		end	
@@ -851,7 +851,7 @@ class UpdatesController < ApplicationController
 		hou_entry = City.find_by(:city_name => hou_name)
 
 		if hou_entry
-			City.update(hou_entry.id, {:city_name => hou_name, :zip => hou_zip, :jobs => hou_jobs_num, :population => hou_pop, :top_employer => hou_top_employer})
+			City.update(hou_entry.id, {:state => "TX", :city_name => hou_name, :zip => hou_zip, :jobs => hou_jobs_num, :population => hou_pop, :top_employer => hou_top_employer})
 		else
 			City.create(:city_name => hou_name, :zip => hou_zip, :jobs => hou_jobs_num, :population => hou_pop, :top_employer => hou_top_employer)
 		end	
@@ -872,7 +872,7 @@ class UpdatesController < ApplicationController
 		nyc_entry = City.find_by(:city_name => nyc_name)
 
 		if nyc_entry
-			City.update(nyc_entry.id, {:city_name => nyc_name, :zip => nyc_zip, :jobs => nyc_jobs_num, :population => nyc_pop, :top_employer => nyc_top_employer})
+			City.update(nyc_entry.id, {:state => "NY", :city_name => nyc_name, :zip => nyc_zip, :jobs => nyc_jobs_num, :population => nyc_pop, :top_employer => nyc_top_employer})
 		else
 			City.create(:city_name => nyc_name, :zip => nyc_zip, :jobs => nyc_jobs_num, :population => nyc_pop, :top_employer => nyc_top_employer)
 		end	
@@ -893,7 +893,7 @@ class UpdatesController < ApplicationController
 		mem_entry = City.find_by(:city_name => mem_name)
 
 		if mem_entry
-			City.update(mem_entry.id, {:city_name => mem_name, :zip => mem_zip, :jobs => mem_jobs_num, :population => mem_pop, :top_employer => mem_top_employer})
+			City.update(mem_entry.id, {:state => "TN", :city_name => mem_name, :zip => mem_zip, :jobs => mem_jobs_num, :population => mem_pop, :top_employer => mem_top_employer})
 		else
 			City.create(:city_name => mem_name, :zip => mem_zip, :jobs => mem_jobs_num, :population => mem_pop, :top_employer => mem_top_employer)
 		end	
@@ -914,7 +914,7 @@ class UpdatesController < ApplicationController
 		la_entry = City.find_by(:city_name => la_name)
 
 		if la_entry
-			City.update(la_entry.id, {:city_name => la_name, :zip => la_zip, :jobs => la_jobs_num, :population => la_pop, :top_employer => la_top_employer})
+			City.update(la_entry.id, {:state => "CA", :city_name => la_name, :zip => la_zip, :jobs => la_jobs_num, :population => la_pop, :top_employer => la_top_employer})
 		else
 			City.create(:city_name => la_name, :zip => la_zip, :jobs => la_jobs_num, :population => la_pop, :top_employer => la_top_employer)
 		end
@@ -935,7 +935,7 @@ class UpdatesController < ApplicationController
 		vb_entry = City.find_by(:city_name => vb_name)
 
 		if vb_entry
-			City.update(vb_entry.id, {:city_name => vb_name, :zip => vb_zip, :jobs => vb_jobs_num, :population => vb_pop, :top_employer => vb_top_employer})
+			City.update(vb_entry.id, {:state => "VA", :city_name => vb_name, :zip => vb_zip, :jobs => vb_jobs_num, :population => vb_pop, :top_employer => vb_top_employer})
 		else
 			City.create(:city_name => vb_name, :zip => vb_zip, :jobs => vb_jobs_num, :population => vb_pop, :top_employer => vb_top_employer)
 		end
@@ -956,7 +956,7 @@ class UpdatesController < ApplicationController
 		buf_entry = City.find_by(:city_name => buf_name)
 
 		if buf_entry
-			City.update(buf_entry.id, {:city_name => buf_name, :zip => buf_zip, :jobs => buf_jobs_num, :population => buf_pop, :top_employer => buf_top_employer})
+			City.update(buf_entry.id, {:state => "NY", :city_name => buf_name, :zip => buf_zip, :jobs => buf_jobs_num, :population => buf_pop, :top_employer => buf_top_employer})
 		else
 			City.create(:city_name => buf_name, :zip => buf_zip, :jobs => buf_jobs_num, :population => buf_pop, :top_employer => buf_top_employer)
 		end
@@ -977,7 +977,7 @@ class UpdatesController < ApplicationController
 		lv_entry = City.find_by(:city_name => lv_name)
 
 		if lv_entry
-			City.update(lv_entry.id, {:city_name => lv_name, :zip => lv_zip, :jobs => lv_jobs_num, :population => lv_pop, :top_employer => lv_top_employer})
+			City.update(lv_entry.id, {:state => "NV", :city_name => lv_name, :zip => lv_zip, :jobs => lv_jobs_num, :population => lv_pop, :top_employer => lv_top_employer})
 		else
 			City.create(:city_name => lv_name, :zip => lv_zip, :jobs => lv_jobs_num, :population => lv_pop, :top_employer => lv_top_employer)
 		end
@@ -998,7 +998,7 @@ class UpdatesController < ApplicationController
 		riv_entry = City.find_by(:city_name => riv_name)
 
 		if riv_entry
-			City.update(riv_entry.id, {:city_name => riv_name, :zip => riv_zip, :jobs => riv_jobs_num, :population => riv_pop, :top_employer => riv_top_employer})
+			City.update(riv_entry.id, {:state => "CA", :city_name => riv_name, :zip => riv_zip, :jobs => riv_jobs_num, :population => riv_pop, :top_employer => riv_top_employer})
 		else
 			City.create(:city_name => riv_name, :zip => riv_zip, :jobs => riv_jobs_num, :population => riv_pop, :top_employer => riv_top_employer)
 		end
@@ -1019,7 +1019,7 @@ class UpdatesController < ApplicationController
 		pro_entry = City.find_by(:city_name => pro_name)
 
 		if pro_entry
-			City.update(pro_entry.id, {:city_name => pro_name, :zip => pro_zip, :jobs => pro_jobs_num, :population => pro_pop, :top_employer => pro_top_employer})
+			City.update(pro_entry.id, {:state => "RI", :city_name => pro_name, :zip => pro_zip, :jobs => pro_jobs_num, :population => pro_pop, :top_employer => pro_top_employer})
 		else
 			City.create(:city_name => pro_name, :zip => pro_zip, :jobs => pro_jobs_num, :population => pro_pop, :top_employer => pro_top_employer)
 		end
@@ -1040,7 +1040,7 @@ class UpdatesController < ApplicationController
 		no_entry = City.find_by(:city_name => no_name)
 
 		if no_entry
-			City.update(no_entry.id, {:city_name => no_name, :zip => no_zip, :jobs => no_jobs_num, :population => no_pop, :top_employer => no_top_employer})
+			City.update(no_entry.id, {:state => "LA", :city_name => no_name, :zip => no_zip, :jobs => no_jobs_num, :population => no_pop, :top_employer => no_top_employer})
 		else
 			City.create(:city_name => no_name, :zip => no_zip, :jobs => no_jobs_num, :population => no_pop, :top_employer => no_top_employer)
 		end
@@ -1061,7 +1061,7 @@ class UpdatesController < ApplicationController
 		mia_entry = City.find_by(:city_name => mia_name)
 
 		if mia_entry
-			City.update(mia_entry.id, {:city_name => mia_name, :zip => mia_zip, :jobs => mia_jobs_num, :population => mia_pop, :top_employer => mia_top_employer})
+			City.update(mia_entry.id, {:state => "FL", :city_name => mia_name, :zip => mia_zip, :jobs => mia_jobs_num, :population => mia_pop, :top_employer => mia_top_employer})
 		else
 			City.create(:city_name => mia_name, :zip => mia_zip, :jobs => mia_jobs_num, :population => mia_pop, :top_employer => mia_top_employer)
 		end

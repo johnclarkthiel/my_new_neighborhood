@@ -40,6 +40,16 @@ class CitiesController < ApplicationController
 		# end
 
 
+
+
+	end
+
+	def zillow_search
+		p params[:state]
+
+		@zillow = HTTParty.get("http://www.zillow.com/webservice/GetRateSummary.htm?zws-id=X1-ZWz1f7n3jp7abv_9od0r&state="+params[:state]+"&output=json").parsed_response
+		p @zillow["response"]
+		render json: @zillow
 	end
 
 

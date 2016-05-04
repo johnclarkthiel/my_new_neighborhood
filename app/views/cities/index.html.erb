@@ -7,7 +7,7 @@
 			<% end %>
 		</select>
 		<br/><br/>
-		<button ng-click='cityCtrl.sendCity()'>Search City</button>
+		<button type='button' class='btn btn-default' ng-click='cityCtrl.sendCity()'>Search City</button>
 	</form>
 	<br><br><br>
 	<div class='container-fluid'>
@@ -25,6 +25,32 @@
 						<td>{{cityCtrl.population}}</td>
 						<td>{{cityCtrl.jobs}}</td>
 						<td>{{cityCtrl.top_employer}}</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<table class='table table-bordered' ng-if='cityCtrl.lastweek_15'>
+				<thead>
+					<th class='center'>15 Year Fixed Rate Loans</th>
+					<th class='center'>5/1 Adjustable Rate Loans</th>
+					<th class='center'>30 year fixed rate loans</th>
+				</thead>
+				<tbody>
+					<thead>
+						<th>Last week</th>
+					</thead>
+					<tr> 
+						<td>{{cityCtrl.lastweek_15}}%</td>
+						<td>{{cityCtrl.lastweek_51}}%</td>
+						<td>{{cityCtrl.lastweek_30}}%</td>
+					</tr>
+					<thead>
+						<th>Today's</th>
+					</thead>
+					<tr> 
+						<td>{{cityCtrl.today_15}}%</td>
+						<td>{{cityCtrl.today_51}}%</td>
+						<td>{{cityCtrl.today_30}}%</td>
 					</tr>
 				</tbody>
 			</table>

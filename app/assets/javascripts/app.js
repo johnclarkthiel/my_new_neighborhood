@@ -13,6 +13,16 @@ app.controller('CityController', ['$http', function($http) {
 			controller.population = response.data.population;
 			controller.top_employer = response.data.top_employer;
 			controller.zip = response.data.zip;
+			var new_controller = controller;
+			$http.post("/cities/zillow_search", { state : response.data.state}).then(function(response){
+				console.log(response.data.response);
+				controller.lastweek_15 = response.data.response.lastWeek.fifteenYearFixed;
+				controller.lastweek_51 = response.data.response.lastWeek.fiveOneARM;
+				controller.lastweek_30 = response.data.response.lastWeek.thirtyYearFixed;
+				controller.today_15 = response.data.response.today.fifteenYearFixed;
+				controller.today_51 = response.data.response.today.fiveOneARM;
+				controller.today_30 = response.data.response.today.thirtyYearFixed;
+			})
 		}, function(err){
 			console.log(err);
 		});

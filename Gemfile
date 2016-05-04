@@ -38,6 +38,14 @@ gem 'autoprefixer-rails'
 
 gem 'devise'
 
+gem 'chartjs-ror'
+
+gem 'crack' # in Gemfile
+require 'crack' # for xml and json
+require 'crack/json' # for just json
+require 'crack/xml' # for just xml
+
+require 'open-uri'
 
 
 # Use ActiveModel has_secure_password

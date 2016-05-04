@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
   post "/cities/city_search" => "cities#city_search"
   get "/cities/city_search" => "cities#city_search"
+  post "/cities/zillow_search" => "cities#zillow_search"
+  get "/cities/zillow_search" => "cities#zillow_search"
 end
 
 #                   Prefix Verb   URI Pattern                    Controller#Action
